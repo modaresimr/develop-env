@@ -8,6 +8,11 @@ WORKDIR $HOME
 
 ######### Customize Container Here ###########
 
+# Install Chromium
+COPY ./workspaces-images/src/ubuntu/install/chromium $INST_SCRIPTS/chromium/
+RUN if [ "$(uname -m)" = "aarch64" ]; then bash $INST_SCRIPTS/chromium/install_chromium.sh; fi && rm -rf $INST_SCRIP>
+
+
 RUN  apt-get update \
     && apt-get install -y apt-transport-https xfdashboard docker-compose ssh zsh \
 	&& echo "ListenAddress 0.0.0.0" >> /etc/ssh/sshd_config \ 
