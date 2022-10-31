@@ -5,3 +5,6 @@
 First run `bash build-dind-image.sh`
 
 Then use docker-compose up -d --build
+
+
+don't forget to use `sudo chown -R 1000:1000 data`

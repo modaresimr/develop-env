@@ -11,9 +11,10 @@ services:
             - DOCKER_FOLDER=/alidev/
         privileged: true
 #        image: kasmweb/ubuntu-focal-dind:1.11.0
-        build: 
+        build:
           context: .
-          args: DEFAULT_USER=ali
+          args:
+            - DEFAULT_USER=ali
 
         shm_size: '2gb'
         volumes:
