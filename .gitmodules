@@ -1,0 +1,3 @@
+[submodule "workspaces-images"]
+	path = workspaces-images
+	url = https://github.com/kasmtech/workspaces-images/
