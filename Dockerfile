@@ -16,11 +16,13 @@ RUN  apt-get update \
 
 
 ENV DEFAULT_USER ali
+ENV CONTAINERS_FOLDER /alidev/
 
 COPY ./src/supervisor/* /etc/supervisor/conf.d/
 COPY ./src/startup/* /$STARTUPDIR/
 
 RUN \
+    chmod +x 
 	usermod -u 1001 kasm-user &&\
 	useradd $DEFAULT_USER --non-unique -u 1000 -g 1000 -d /home/$DEFAULT_USER -s /bin/zsh &&\
 	usermod -a -G kasm-user $DEFAULT_USER &&\

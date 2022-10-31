@@ -8,7 +8,7 @@ services:
             - '23:22'
         environment:
             - VNC_PW=password
-            - DOCKER_FOLDER=/alidev/
+            - CONTAINERS_FOLDER=/alidev/
         privileged: true
 #        image: kasmweb/ubuntu-focal-dind:1.11.0
         build:
