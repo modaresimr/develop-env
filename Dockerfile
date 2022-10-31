@@ -10,7 +10,7 @@ WORKDIR $HOME
 
 # Install Chromium
 COPY ./workspaces-images/src/ubuntu/install/chromium $INST_SCRIPTS/chromium/
-RUN if [ "$(uname -m)" = "aarch64" ]; then bash $INST_SCRIPTS/chromium/install_chromium.sh; fi && rm -rf $INST_SCRIP>
+RUN if [ "$(uname -m)" = "aarch64" ]; then bash $INST_SCRIPTS/chromium/install_chromium.sh; fi && rm -rf $INST_SCRIPTS/chromium/
 
 
 RUN  apt-get update \
