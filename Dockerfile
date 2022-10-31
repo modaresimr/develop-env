@@ -22,7 +22,7 @@ RUN  apt-get update \
 
 ENV DEFAULT_USER ali
 ENV CONTAINERS_FOLDER /alidev/
-
+ENV KASM_SVC_AUDIO 0
 COPY ./src/supervisor/* /etc/supervisor/conf.d/
 COPY ./src/startup/* /$STARTUPDIR/
 
